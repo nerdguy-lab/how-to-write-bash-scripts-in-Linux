@@ -1,8 +1,9 @@
 #!/bin/bash
 
-package=noexist
+package=htop
+mkdir logfiles/
 
-sudo apt install $package >> package_install_results.log
+sudo apt install $package >> logfiles/package_install_results.log
 
 if [ $? -eq 0 ]
 then
@@ -10,5 +11,5 @@ then
   echo "The new command is avaialble here:"
   which $package
 else
-  echo "$package failed to install" >>  package_install_failure.log
+  echo "$package failed to install" >> logfiles/package_install_failure.log
 fi
