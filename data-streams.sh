@@ -1,8 +1,8 @@
 #!/bin/bash
 
 release_file=/etc/os-release
-logfile=/logfiles/updater.log
-errorlog=/logfiles/updater_errors.log
+logfile=logfiles/updater.log
+errorlog=logfiles/updater_errors.log
 
 if grep -q "Arch" $release_file
 then
